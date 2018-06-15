@@ -6,6 +6,12 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+/* HTTP 请求的返回结果 */
+type Result struct {
+	Data    string `json:"data"`
+	Message string `json:"msg"`
+}
+
 func main() {
 
 	r := gin.Default()
@@ -16,13 +22,11 @@ func main() {
 }
 
 func test(c *gin.Context) {
-	var result struct {
-		Data    string `json:"data"`
-		Message string `json:"msg"`
-	}
+
+	var result Result
 
 	result.Data = "Go REST service"
 	result.Message = "No message"
 
-	c.JSON(http.StatusOK, result)
+	c.SecureJSON(http.StatusOK, result)
 }
