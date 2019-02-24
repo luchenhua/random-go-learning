@@ -1,2 +1,2 @@
-# random-go-learning
+# random-learning-go
 Random Go learning code.
