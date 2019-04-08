@@ -12,7 +12,7 @@ func Test(c *gin.Context) {
 	var result entity.Result
 
 	result.Data = "Go REST service"
-	result.Message = "No message modified"
+	result.Message = "No message modified."
 
 	c.SecureJSON(http.StatusOK, result)
 }

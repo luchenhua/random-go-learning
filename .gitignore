@@ -1460,3 +1460,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# Dockerfile
+vendor/
