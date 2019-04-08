@@ -11,5 +11,5 @@ func main() {
 
 	r.GET("/test", service.Test)
 
-	r.Run(":8081")
+	r.Run(":3000")
 }
