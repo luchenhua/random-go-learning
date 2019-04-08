@@ -1,9 +1,10 @@
 package service
 
 import (
-	"github.com/gin-gonic/gin"
-	"github.com/luchenhua/random-learning-go/entity"
 	"net/http"
+	"random-learning-go/entity"
+
+	"github.com/gin-gonic/gin"
 )
 
 func Test(c *gin.Context) {
@@ -11,7 +12,7 @@ func Test(c *gin.Context) {
 	var result entity.Result
 
 	result.Data = "Go REST service"
-	result.Message = "No message"
+	result.Message = "No message modified"
 
 	c.SecureJSON(http.StatusOK, result)
 }

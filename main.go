@@ -1,8 +1,9 @@
 package main
 
 import (
+	"random-learning-go/service"
+
 	"github.com/gin-gonic/gin"
-	"github.com/luchenhua/random-learning-go/service"
 )
 
 func main() {

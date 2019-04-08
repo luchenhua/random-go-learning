@@ -3,9 +3,10 @@
 FROM golang:alpine AS builder
 WORKDIR /go/src/app
 COPY . .
+ENV GO111MODULE=on
 RUN apk add --no-cache git
 RUN go get -d -v ./...
-RUN go install -v ./...
+RUN go install -mod=vendor -v ./...
 
 #final stage
 FROM alpine:latest
