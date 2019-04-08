@@ -1,0 +1,11 @@
+version: "0.1"
+services:
+  db:
+    image: "postgres:latest"
+    container_name: "middleware_postgres"
+    ports:
+      - "54320:5432"
+    volumes:
+      - my_dbdata:/var/lib/postgresql/data
+volumes:
+  my_dbdata:
