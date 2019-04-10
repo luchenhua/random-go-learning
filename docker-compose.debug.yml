@@ -5,6 +5,6 @@ services:
     image: random-learning-go
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-debug
     ports:
         - 3000:3000
