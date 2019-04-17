@@ -14,6 +14,7 @@ RUN go install -mod=vendor -v ./...
 FROM alpine:latest
 RUN apk --no-cache add ca-certificates
 COPY --from=builder /go/bin/random-learning-go /random-learning-go
+ENV LIEN_API_ADDRESS=https://ual-uat-lien.decathlon.com.cn/trigger-msg/v1/api/event/query
 ENTRYPOINT ./random-learning-go
 LABEL Name=random-learning-go Version=0.0.1
 EXPOSE 3000

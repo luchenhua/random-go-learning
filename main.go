@@ -12,6 +12,7 @@ func main() {
 
 	r.GET("/test", service.Test)
 	r.GET("/testLien", service.TestLien)
+	r.GET("/testLienApi", service.TestLienApi)
 
 	r.Run(":3000")
 }
